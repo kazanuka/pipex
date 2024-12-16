@@ -6,11 +6,21 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 11:13:47 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/16 16:19:03 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:12:40 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
+
+//ERRORLARI HANDLE ET 
+
+
+//HER HATAYA ÖZEL ERROR YAZ
+
+
+
+
+
 
 char *find(char *cmd, char **envp)
 {
