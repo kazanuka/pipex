@@ -1,7 +1,8 @@
 NAME	= pipex
 
 FILES	= pipex_utils.c \
-			pipex_utils2.c \
+			pipex_utilsii.c \
+			pipex2.c \
 
 MAIN	= pipex.c
 
