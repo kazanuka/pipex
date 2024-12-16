@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 11:13:47 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/16 15:24:29 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/16 16:19:03 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void child(char **argv,char **envp, int *fd)
 void parent(char **argv, char **envp, int *fd)
 {
 	int outfile;
-	outfile = open(argv[4], O_RDWR, 0777);
+	outfile = open(argv[4], O_RDWR | O_CREAT, 0777);
 	
 	if(outfile < 0)
 		error();
@@ -84,7 +84,19 @@ void parent(char **argv, char **envp, int *fd)
 
 
 
+int	is_there_path(char *envp[])
+{
+	int	i;
 
+	i = 0;
+	while (envp[i])
+	{
+		if (ft_strnstr(envp[i], "PATH", 4))
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 
 int main(int argc, char **argv, char **envp)
@@ -92,6 +104,11 @@ int main(int argc, char **argv, char **envp)
 	int fd[2];
 	pid_t pid;
 	
+	if (!is_there_path(envp))
+	{
+		ft_putstr_fd("AAAAAAAAAAAAAAAA", 1);
+		return 1;
+	}
 	if (argc == 5)
 	{
 		if(pipe(fd) == -1)
@@ -104,11 +121,10 @@ int main(int argc, char **argv, char **envp)
 		waitpid(pid,NULL,0);
 		parent(argv,envp,fd);
 	}	
-		
 	else
 	{
 		ft_putstr_fd("Error: Bad Arguments\n",0);
 		ft_putstr_fd("E.g. <file1> <cmd1> <cmd2> <file2> \n",0);
 	}
-
+	return (0);
 }
