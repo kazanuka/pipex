@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 11:13:47 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/16 15:17:55 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/16 15:24:29 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void child(char **argv,char **envp, int *fd)
 void parent(char **argv, char **envp, int *fd)
 {
 	int outfile;
-	outfile = open(argv[4], O_RDONLY, 0777);
+	outfile = open(argv[4], O_RDWR, 0777);
 	
 	if(outfile < 0)
 		error();
