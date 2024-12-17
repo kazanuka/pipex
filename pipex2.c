@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:13:32 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/17 15:23:52 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/17 15:24:55 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	is_there_path(char *envp[])
 	{
 		if (ft_strnstr(envp[i], "PATH", 4))
 		{
-			error(ERR_PIPE);
+			error(ERR_PATH);
 			return (1);
 		}
 		i++;

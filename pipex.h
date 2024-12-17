@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 13:59:48 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/17 15:21:33 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/17 15:25:17 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,12 @@
 # include <sys/wait.h>
 # include <fcntl.h>
 
-# define ERR_INFILE "Infile Error"//
-# define ERR_OUTFILE "Outfile Error"//
-# define ERR_INPUT "Invalid number of arguments.\n"
-# define ERR_PIPE "Pipe error"//
+# define ERR_INFILE "Infile Error"
+# define ERR_OUTFILE "Outfile Error"
+# define ERR_PIPE "Pipe error"
 # define ERR_PATH "Path not found\n"
-# define ERR_CMD "Command not found\n"//
-# define ERR_PRC "The process failed\n"//
+# define ERR_CMD "Command not found\n"
+# define ERR_PRC "The process failed\n"
 
 void	error(char *error);
 char	*find(char *cmd, char **envp);
