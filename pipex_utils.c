@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 13:35:40 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/16 13:58:56 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/17 12:39:25 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-
 
 
 size_t	ft_strlen(const char *s)
