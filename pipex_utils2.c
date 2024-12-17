@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex_utilsii.c                                    :+:      :+:    :+:   */
+/*   pipex_utils2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 13:36:28 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/16 14:01:45 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/17 15:13:54 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
 
 void	ft_putstr_fd(char *s, int fd)
 {

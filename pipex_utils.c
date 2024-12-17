@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 13:35:40 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/17 12:39:25 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/17 15:13:27 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(adress, s1, ft_strlen(s1) + 1);
 	return (adress);
 }
-
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -66,10 +65,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (address);
 }
 
-
-
-
-
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*p;
@@ -85,7 +80,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
 
 size_t	ft_strlen(const char *s)
 {
