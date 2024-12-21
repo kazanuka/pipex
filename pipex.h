@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 13:59:48 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/17 15:25:17 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/17 16:11:40 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # define ERR_INFILE "Infile Error"
 # define ERR_OUTFILE "Outfile Error"
 # define ERR_PIPE "Pipe error"
-# define ERR_PATH "Path not found\n"
 # define ERR_CMD "Command not found\n"
 # define ERR_PRC "The process failed\n"
 

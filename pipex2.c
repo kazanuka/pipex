@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 15:13:32 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/17 15:24:55 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/17 16:04:30 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,7 @@ int	is_there_path(char *envp[])
 	while (envp[i])
 	{
 		if (ft_strnstr(envp[i], "PATH", 4))
-		{
-			error(ERR_PATH);
 			return (1);
-		}
 		i++;
 	}
 	return (0);

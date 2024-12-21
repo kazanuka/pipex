@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 11:13:47 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/12/17 15:11:43 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/12/17 16:11:01 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,13 @@ int	main(int argc, char *argv[], char *env[])
 	pid_t		child_pid;
 	int			pipefd[2];
 
-	if (is_there_path(env) == 0)
-		error(ERR_PATH);
 	if (argc == 5)
 	{
+		if (!is_there_path(env))
+		{	
+			ft_putstr_fd("No PATH found.", 1);
+			return (1);
+		}
 		if (pipe(pipefd) == -1)
 			error(ERR_PIPE);
 		child_pid = fork();
@@ -99,7 +102,7 @@ int	main(int argc, char *argv[], char *env[])
 			child(argv, env, pipefd);
 		parent(argv, env, pipefd);
 	}
-	else
+	else if (argc != 5)
 		ft_putstr_fd("Error: Bad Arguments\n", 1);
 	return (0);
 }
